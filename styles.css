@@ -16,14 +16,29 @@ ul {
   width: auto;
   display: flex;
   flex-direction: row;
+  padding-top: 16px;
+  gap: 6px;
 }
 
 li {
   padding: 10px 20px;
   list-style: none;
+  border: 1px solid rgb(17, 17, 17);
+  transform: none;
 }
 
 li:hover {
-  border: 1px solid red;
+  border: 1px solid rgb(255, 0, 0);
   cursor: pointer;
+}
+
+li:active {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+a:focus {
+  background-color: green;
+  animation: none;
+  transform: none;
 }

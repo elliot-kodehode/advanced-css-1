@@ -12,9 +12,6 @@ body {
   justify-content: center;
 }
 
-div {
-}
-
 ul {
   width: auto;
   display: flex;
@@ -22,5 +19,11 @@ ul {
 }
 
 li {
-  margin: 20px;
+  padding: 10px 20px;
+  list-style: none;
+}
+
+li:hover {
+  border: 1px solid red;
+  cursor: zoom-in;
 }

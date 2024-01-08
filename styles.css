@@ -25,5 +25,5 @@ li {
 
 li:hover {
   border: 1px solid red;
-  cursor: zoom-in;
+  cursor: pointer;
 }

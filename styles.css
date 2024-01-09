@@ -8,23 +8,36 @@
 
 body {
   display: flex;
+  flex-direction: column;
   width: 100vw;
+  height: 100vh;
   justify-content: center;
+  align-items: center;
 }
 
 ul {
-  width: auto;
   display: flex;
+  height: 12vh;
   flex-direction: row;
-  padding-top: 16px;
-  gap: 6px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 16px;
+  width: 900px;
+  border: 2px solid brown;
+  margin-top: 16px;
 }
 
 li {
   padding: 10px 20px;
-  list-style: none;
   border: 1px solid rgb(17, 17, 17);
+  border-radius: 5px;
   transform: none;
+  height: fit-content;
+}
+
+li:before{">>"}
+li:nth-child(odd) {
+  color: grey;
 }
 
 li:hover {
@@ -32,13 +45,51 @@ li:hover {
   cursor: pointer;
 }
 
+li:focus {
+  font-size: 18px;
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 5px;
+  /* margin-top: -5px; */
+  transition: 200ms;
+}
+
 li:active {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  border-radius: 5px;
+  /* margin-top: -5px; */
+  background-color: rgb(18, 18, 18);
 }
 
-a:focus {
-  background-color: green;
-  animation: none;
-  transform: none;
+div {
+  display: flex;
+  flex-direction: column;
+}
+button {
+  align-self: center;
+  justify-self: center;
+  margin-top: 22px;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+#hidden {
+  visibility: hidden;
+  width: fit-content;
+  margin-top: 5px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: rgb(255, 240, 78);
+}
+button:hover + #hidden {
+  visibility: visible;
 }

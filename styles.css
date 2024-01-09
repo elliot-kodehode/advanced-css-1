@@ -15,27 +15,39 @@ body {
   align-items: center;
 }
 
+/* Main Content */
 ul {
   display: flex;
   height: 12vh;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  padding: 16px;
-  width: 900px;
-  border: 2px solid brown;
+  width: fit-content;
   margin-top: 16px;
+  gap: 6px;
 }
 
 li {
   padding: 10px 20px;
+  list-style: none;
   border: 1px solid rgb(17, 17, 17);
   border-radius: 5px;
   transform: none;
   height: fit-content;
 }
 
-li:before{">>"}
+/* List Psuedo-elements and classes */
+
+li::before {
+  content: ">>";
+  margin-right: 5px;
+  color: black;
+}
+li:active::before {
+  content: ">>";
+  margin-right: 5px;
+  color: white;
+}
 li:nth-child(odd) {
   color: grey;
 }
@@ -50,7 +62,6 @@ li:focus {
   background-color: green;
   border: 2px solid black;
   border-radius: 5px;
-  /* margin-top: -5px; */
   transition: 200ms;
 }
 
@@ -63,9 +74,10 @@ li:active {
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   border-radius: 5px;
-  /* margin-top: -5px; */
   background-color: rgb(18, 18, 18);
 }
+
+/* Button and content */
 
 div {
   display: flex;
@@ -92,4 +104,15 @@ button:hover {
 }
 button:hover + #hidden {
   visibility: visible;
+}
+
+@media screen and (max-width: 700px) {
+  ul {flex-direction: column;
+    justify-content: space-evenly;
+    height: 400px;
+    gap: 12px;
+
+  }
+  li{width:220px;
+  }
 }
